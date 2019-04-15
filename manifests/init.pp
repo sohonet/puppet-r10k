@@ -23,6 +23,7 @@ class r10k (
   $root_user                                                  = $r10k::params::root_user,
   $root_group                                                 = $r10k::params::root_group,
   $postrun                                                    = undef,
+  Integer $pool_size                                          = 1,
   Boolean $include_prerun_command                             = false,
   Boolean $include_postrun_command                            = false,
   Boolean $install_gcc                                        = false,
@@ -71,6 +72,7 @@ class r10k (
     postrun                   => $postrun,
     root_user                 => $root_user,
     root_group                => $root_group,
+    pool_size                 => $pool_size,
   }
 
   if $mcollective {

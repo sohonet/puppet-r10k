@@ -61,6 +61,7 @@ class r10k::config (
   Optional[Array] $postrun                  = undef,
   $root_user                                = $r10k::params::root_user,
   $root_group                               = $r10k::params::root_group,
+  Integer $pool_size                        = 1,
   Stdlib::Absolutepath $puppetconf_path     = $r10k::params::puppetconf_path,
   String $r10k_yaml_template                = 'r10k/r10k.yaml.erb',
 ) inherits r10k::params {
